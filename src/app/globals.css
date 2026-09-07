@@ -5,8 +5,12 @@
   --foreground: #171717;
   --color-title: #c0c065;
 
-  --primary: 112 24% 40%;
-  --main: #13120e;
+  --primary: #7b7b3b;
+  --main: #0b0b09;
+
+  --slate-gray: #a1a1a1;
+  --near-black: #1c1c16;
+  --snow-white: #fdfdfd;
 }
 
 @theme inline {
@@ -14,10 +18,18 @@
   --font-jarkarta-sans: var(--font-jarkarta-sans);
 
   /* colors */
-  --color-primary: hsl(var(--primary));
+  --color-primary: var(--primary);
   --color-main: hsl(var(--main));
   --color-title-page: var(--color-title);
+  --color-slate-gray: var(--slate-gray);
+  --color-near-black: var(--near-black);
+  --color-green-light: var(--green-light);
+  --color-snow-white: var(--snow-white);
+
+  /* breakpoints */
+  
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {

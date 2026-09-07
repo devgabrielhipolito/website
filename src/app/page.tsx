@@ -1,8 +1,6 @@
-import Cases from "../components/cases";
-import FirstCopy from "../components/copy/firstCopy";
-import Header from "../components/header";
-import Initial from "../components/home";
-import Services from "../components/services";
+import FirstCopy from "../sections/copy/firstCopy";
+import Header from "../sections/header";
+import Initial from "../sections/home";
 
 export default function Home() {
   return (

@@ -6,8 +6,10 @@ const variants = cva("", {
   variants: {
     base: {},
     variant: {
-      default: "w-full flex flex-col  border-white/10  gap-6",
+      default:
+        "w-full md:w-[420px]    px-[15px] py-4 flex flex-col bg-black border-white/10 gap-4 sm:gap-6 rounded-lg",
     },
+    bg: { primary: "bg-primary", "near-black": "bg-near-black" },
     defaultVariants: {
       variant: "default",
     },
@@ -22,13 +24,14 @@ type CardProps = VariantProps<typeof variants> &
 
 export const Card: FC<CardProps> = ({
   variant,
+  bg,
   className,
   children,
   title,
   ...rest
 }) => {
   return (
-    <div className={cn(variants({ variant }), className)} {...rest}>
+    <div className={cn(variants({ variant, bg }), className)} {...rest}>
       <h2 className="text-5xl ">{title}</h2>
       {children}
     </div>

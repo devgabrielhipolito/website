@@ -13,14 +13,13 @@ const Header = () => {
       <div className="w-full flex items-center justify-between border-b border-b-white/10 h-24 p-8">
         <Text className="font-jarkarta-sans">Name</Text>
         <Button
-          className="cursor-pointer transition-all"
+          className="cursor-pointer transition-all bg-transparent w-auto"
           leftIcon={isMenuOpen ? <X /> : <Menu />}
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
           Menu
         </Button>
       </div>
-
       <div
         className={`w-full fixed -z-10  left-0 top-0 h-screen bg-black transition-transform duration-300 ease-in-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
