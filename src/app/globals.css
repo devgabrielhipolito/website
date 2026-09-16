@@ -27,9 +27,7 @@
   --color-snow-white: var(--snow-white);
 
   /* breakpoints */
-  
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -50,5 +48,6 @@ body {
 }
 
 * {
+  color: white;
   font-family: var(--font-jarkarta-sans);
 }

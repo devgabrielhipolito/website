@@ -3,16 +3,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/utils/cn";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-xl text font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl text font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
   {
     variants: {
       variant: {
-        default:" cursor-pointer w-sm bg-near-black hover:bg-near-black/50 xl:w-sm xl:text-lg ",
-        destructive: "bg-red-500 text-white hover:bg-red-600",
+        default:
+          "w-full xl:w-sm h-20 cursor-pointer bg-near-black  text-sm hover:bg-near-black/50  ",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "w-full xl:w-sm h-20 cursor-pointer bg-near-black border border-primary text-sm hover:bg-near-black/50 ",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "xl:w-sm bg-secondary text-secondary-foreground  hover:bg-near-black/50 ",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -38,15 +38,22 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant, size, leftIcon, rightIcon, children, ...props },
+    {
+      className,
+      variant = "default",
+      size,
+      leftIcon,
+      rightIcon,
+      children,
+      ...props
+    },
     ref,
   ) => {
     return (
       <button
         ref={ref}
         className={cn(buttonVariants({ variant, size }), className)}
-        {...props}
-      >
+        {...props}>
         {leftIcon && <span className="inline-flex shrink-0">{leftIcon}</span>}
         {children}
         {rightIcon && <span className="inline-flex shrink-0">{rightIcon}</span>}

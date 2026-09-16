@@ -2,7 +2,7 @@ import { FC, HTMLAttributes } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/utils/cn";
 
-const textVariants = cva("text-foreground", {
+const textVariants = cva("", {
   variants: {
     base: {},
     variant: {
@@ -10,7 +10,7 @@ const textVariants = cva("text-foreground", {
       heading: "text-5xl font-bold",
       subheading: "text-2xl font-semibold",
       body: "text-base",
-      caption: "text-sm text-muted-foreground",
+      caption: "text-sm text-red-200 ",
       error: "text-sm text-red-500",
     },
     weight: {
@@ -40,14 +40,13 @@ export const Text: FC<TextProps> = ({
   weight,
   align,
   children,
-  className,
+  className = "text-amber-950",
   ...props
 }) => {
   return (
     <p
-      className={cn(textVariants({ variant, weight, align }), className)}
       {...props}
-    >
+      className={cn(textVariants({ variant, weight, align }), className)}>
       {children}
     </p>
   );

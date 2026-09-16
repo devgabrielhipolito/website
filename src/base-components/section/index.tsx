@@ -20,7 +20,7 @@ const variants = cva("", {
     height: {
       auto: "h-auto",
       full: "h-full",
-      screen: "h-screen",
+      screen: "h-full",
       dvh: "h-dvh",
       min: "min-h-screen",
     },
@@ -67,7 +67,6 @@ const variants = cva("", {
     display: "flex",
     direction: "column",
     padding: "sm",
-    space: "between-center",
     weight: "full",
     height: "screen",
     border: "none",
