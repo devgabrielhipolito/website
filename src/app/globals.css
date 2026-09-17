@@ -38,6 +38,7 @@
 
 html,
 body {
+  color: white;
   min-height: 100%;
 }
 
@@ -48,6 +49,5 @@ body {
 }
 
 * {
-  color: white;
   font-family: var(--font-jarkarta-sans);
 }

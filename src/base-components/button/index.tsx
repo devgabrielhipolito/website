@@ -8,11 +8,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "w-full xl:w-sm h-20 cursor-pointer bg-near-black  text-sm hover:bg-near-black/50  ",
+          "w-full xl:w-sm h-20 cursor-pointer bg-near-black  text-md hover:bg-near-black/50  ",
         outline:
-          "w-full xl:w-sm h-20 cursor-pointer bg-near-black border border-primary text-sm hover:bg-near-black/50 ",
+          "w-full xl:w-sm h-20 cursor-pointer bg-near-black border border-primary text-md hover:bg-near-black/50 ",
         secondary:
-          "xl:w-sm bg-secondary text-secondary-foreground  hover:bg-near-black/50 ",
+          "xl:w-sm bg-secondary text-secondary-foreground text-md hover:bg-near-black/50 ",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

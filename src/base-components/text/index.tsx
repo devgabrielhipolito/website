@@ -2,19 +2,18 @@ import { FC, HTMLAttributes } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/utils/cn";
 
-const textVariants = cva("", {
+const textVariants = cva("text-wrap max-w-[90%]", {
   variants: {
-    base: {},
     variant: {
-      default: "text-base",
-      heading: "text-5xl font-bold",
-      subheading: "text-2xl font-semibold",
+      default: "text-base sm:text-lg lg:text-[19.61px] md:text-md",
+      heading: "text-4xl font-bold md:text-6xl xl:text-7xl",
+      subheading: "text-3xl font-semibold",
       body: "text-base",
-      caption: "text-sm text-red-200 ",
-      error: "text-sm text-red-500",
+      caption: "text-sm font-light text-slate-gray",
     },
     weight: {
       normal: "font-normal",
+      light: "font-light",
       medium: "font-medium",
       semibold: "font-semibold",
       bold: "font-bold",
@@ -40,7 +39,7 @@ export const Text: FC<TextProps> = ({
   weight,
   align,
   children,
-  className = "text-amber-950",
+  className,
   ...props
 }) => {
   return (
