@@ -9,8 +9,11 @@ const variants = cva("", {
     base: {},
     variant: {
       default:
-        "w-full md:w-[488px] px-[15px] py-4 p-8 flex bg-near-black flex-col  border border-primary gap-4 sm:gap-6 rounded-lg",
+        "w-full xl:w-[480px] px-[15px] py-4 p-8 flex bg-near-black flex-col  border border-primary gap-4 sm:gap-6 rounded-lg",
+      auto:
+        "w-full px-[10px] py-4 p-4 flex bg-near-black flex-col  border border-primary gap-4 sm:gap-6 rounded-lg",
     },
+
     bg: { primary: "bg-primary", "near-black": "bg-near-black" },
     defaultVariants: {
       variant: "default",

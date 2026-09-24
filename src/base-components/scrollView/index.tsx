@@ -15,8 +15,8 @@ export function FlatList<T>({
   keyExtractor,
   direction = "row",
   ListEmptyComponent,
-  gap = 15,
-  className = "flex  gap-10 flex-row ",
+  gap = 20,
+  className,
   style,
   ...rest
 }: FlatListProps<T>) {
@@ -24,8 +24,13 @@ export function FlatList<T>({
     return <>{ListEmptyComponent}</>;
   }
 
+
+
   return (
-    <div className={className} {...rest}>
+    <div
+      className={` flex  gap-20  fle`}
+      style={style}
+      {...rest}>
       {data.map((item, index) => (
         <React.Fragment key={keyExtractor ? keyExtractor(item, index) : index}>
           {renderItem(item, index)}

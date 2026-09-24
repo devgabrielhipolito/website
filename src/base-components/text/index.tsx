@@ -1,14 +1,14 @@
-import { FC, HTMLAttributes } from "react";
+import { ElementType, FC, HTMLAttributes } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/src/utils/cn";
 
-const textVariants = cva("text-wrap max-w-[90%]", {
+const textVariants = cva("text-wrap max-w-[90%] text-snow-white", {
   variants: {
     variant: {
-      default: "text-base sm:text-lg lg:text-[19.61px] md:text-md",
-      heading: "text-4xl font-bold md:text-6xl xl:text-7xl",
-      subheading: "text-3xl font-semibold",
-      body: "text-base",
+      default: "text-base sm:text-lg md:text-[17px] lg:text-[19.61px]",
+      heading: "text-4xl font-bold md:text-6xl lg:text-7xl",
+      subheading: "text-3xl w-full  font-semibold md:text-5xl xl:text-6xl",
+      body: "lg:text-2xl text-1xl",
       caption: "text-sm font-light text-slate-gray",
     },
     weight: {
@@ -17,6 +17,9 @@ const textVariants = cva("text-wrap max-w-[90%]", {
       medium: "font-medium",
       semibold: "font-semibold",
       bold: "font-bold",
+    },
+    size: {
+      lg: "text-4xl",
     },
     align: {
       left: "text-left",
@@ -31,22 +34,27 @@ const textVariants = cva("text-wrap max-w-[90%]", {
   },
 });
 
-type TextProps = HTMLAttributes<HTMLParagraphElement> &
-  VariantProps<typeof textVariants> & {};
+interface TextProps
+  extends HTMLAttributes<HTMLElement>, VariantProps<typeof textVariants> {
+  as?: ElementType;
+  children: React.ReactNode;
+}
 
 export const Text: FC<TextProps> = ({
   variant,
   weight,
   align,
   children,
+  size,
   className,
+  as: Component = "p",
   ...props
 }) => {
   return (
-    <p
+    <Component
       {...props}
-      className={cn(textVariants({ variant, weight, align }), className)}>
+      className={cn(textVariants({ variant, weight, size, align }), className)}>
       {children}
-    </p>
+    </Component>
   );
 };

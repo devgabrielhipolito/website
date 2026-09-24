@@ -5,41 +5,41 @@ import { Text } from "@/src/base-components/text";
 const Services = () => {
   return (
     <Section display={"flex"} gap={"xl"}>
-      <div className="flex flex-col gap-2">
-        <Text>Serviços</Text>
-        <h1 className="text-5xl xl:max-w-210 ">
+      <div className="flex flex-col gap-2 w-">
+        <Text weight={"semibold"}>Serviços</Text>
+        <Text as={"h1"} variant={"subheading"}>
           Soluções sob medida para o seu negócio, usando ferramentas de ponta.
-        </h1>
+        </Text>
       </div>
 
       <div className="flex gap-10 justify-between flex-wrap w-full ">
         <Card variant={"default"}>
-          <Text>Landing page</Text>
-          <Text className="xl:max-w-220">
+          <Text weight={"semibold"}>Landing page</Text>
+          <Text>
             Uma página só, um objetivo só: fazer o seu visitante virar cliente.
             Landing pages rápidas, diretas e construídas pra converter — sem
             distração, sem enrolação.
           </Text>
         </Card>
         <Card>
-          <Text>Landing page</Text>
-          <Text className="xl:max-w-220 ">
+          <Text weight={"semibold"}>Landing page</Text>
+          <Text>
             Uma página só, um objetivo só: fazer o seu visitante virar cliente.
             Landing pages rápidas, diretas e construídas pra converter — sem
             distração, sem enrolação.
           </Text>
         </Card>
         <Card>
-          <Text>Landing page</Text>
-          <Text className="xl:max-w-220 ">
+          <Text weight={"semibold"}>Landing page</Text>
+          <Text>
             Uma página só, um objetivo só: fazer o seu visitante virar cliente.
             Landing pages rápidas, diretas e construídas pra converter — sem
             distração, sem enrolação.
           </Text>
         </Card>
         <Card>
-          <Text>Landing page</Text>
-          <Text className="xl:max-w-220 ">
+          <Text weight={"semibold"}>Landing page</Text>
+          <Text>
             Uma página só, um objetivo só: fazer o seu visitante virar cliente.
             Landing pages rápidas, diretas e construídas pra converter — sem
             distração, sem enrolação.

@@ -1,10 +1,14 @@
+"use client";
 import { Button } from "@/src/base-components/button";
 import { Section } from "@/src/base-components/section";
 import { MoveRight } from "lucide-react";
 import { System } from "../mockup/system";
 import { Text } from "@/src/base-components/text";
+import { useWindow } from "@/src/hook/useWindow";
 
 const Initial = () => {
+  const { width } = useWindow();
+  const showSystemAnimation = width >= 900;
   return (
     <Section
       gap={"lg"}
@@ -17,7 +21,7 @@ const Initial = () => {
             Desenvolvimento web / Marketing / Apps
           </Text>
         </div>
-        <Text variant={"heading"} weight={"medium"}>
+        <Text variant={"subheading"}>
           Desenvolvendo soluções,
           <span className="text-slate-gray font-light">
             criando estratégias para sua empresa
@@ -36,7 +40,8 @@ const Initial = () => {
           </Button>
         </div>
       </div>
-      <System />
+
+      {showSystemAnimation && <System />}
     </Section>
   );
 };
